@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Expiry Alert Inventory App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional inventory management dashboard that allows store managers to scan product QR codes, automatically log inventory data, and receive real-time alerts for products that are **expiring soon** or **already expired**.
 
-## Available Scripts
+This frontend is built using **React.js** and designed with a clean, responsive interface that fits seamlessly into retail or warehouse environments.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📸 **QR Code Scanning** – Instantly scans QR codes with product details
+- 📅 **Expiry Alerts** – Flags products that are expired or expiring within 24 hours
+- 📦 **Product Dashboard** – Displays all scanned products with full details
+- 🧹 **Inventory Control** – Options to delete individual products or clear all
+- 🎨 **Professional UI** – Clean layout styled with industry-ready aesthetics
+- 🔄 **Auto Refresh** – Dashboard updates automatically on new scans
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** React.js
+- **QR Code Reader:** `react-qr-reader` (or modern alternative)
+- **HTTP Requests:** Axios
+- **State Management:** useState / useEffect
+- **Styling:** Custom CSS (clean, flat theme)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Folder Structure
+expiry-app-frontend/
+├── public/
+│ └── logo.png
+├── src/
+│ ├── components/
+│ │ ├── Dashboard.js
+│ │ └── QRUploader.js
+│ ├── App.js
+│ ├── styles.css
+│ └── index.js
+└── package.json
+## 🔧 Setup & Run Locally
+# Clone this repo
+git clone https://github.com/AJAY-M-S/expiry-app-frontend.git
+cd expiry-app-frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run the app
+npm start
+📄 QR Code Format
+The app expects scanned QR codes to contain JSON like :
+{
+  "product_name": "aavin_milk",
+  "product_id": 2342,
+  "mfg_date": "2025-07-12",
+  "exp_date": "2025-07-14"
+}
+🤝 Backend Repo
+🔗 [ Backend Repository (Node.js + MongoDB)] (https://github.com/AJAY-M-S/expiry-app-backend)
+📄 License
+This project is intended for educational, demo, or small-scale commercial use.
